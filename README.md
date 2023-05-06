@@ -1,0 +1,1 @@
+the maternal deaths reporting system is a mini project in its early stages , it has a login and a register form connected to a database  which is used to report on maternal cases in the greater accra region of ghana, for any further questions contact me on 0558749735
