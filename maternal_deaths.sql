@@ -233,3 +233,19 @@ CREATE TABLE maternal_deaths_entered (
     DateofCommitteeChairman DATE
 
 );
+
+CREATE TABLE IF NOT EXISTS registration (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(100) NOT NULL,
+  confirmPass VARCHAR(255) NOT NULL,
+  Fullname VARCHAR(255) NOT NULL,
+  nameoffacility VARCHAR(255) NOT NULL,
+  cadre VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+
+
