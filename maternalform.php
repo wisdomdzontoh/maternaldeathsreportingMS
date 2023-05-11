@@ -15,227 +15,17 @@ if (!isset($_SESSION['username'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
-
-@media (min-width: 576px) {
-      .jumbotron {
-        padding: 1rem 2rem;
-      }
-    }
-
-.center {
-  text-align: center;
-  color: rgb(247, 63, 31);
-}
-
-  .tdaction {
-    width: 15%;
-  }
-
-  .tdSr {
-    width: 7%;
-  }
-
-  .other label {
-    color: #f83b15;
-  }
-
-  .other input {
-    border: 2px solid #f93a1c;
-  } 
-  label {
-    margin-bottom: 0;
-  }
-  .form-control {
-    border:1px solid grey;
-  }
-
-form label {
-  font-weight: bold;
-  color: rgb(1, 33, 1010);
-}
-
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-body {
-			background-image: url('https://scx2.b-cdn.net/gfx/news/hires/2022/mom-and-baby.jpg');
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
-.wrapper{
-  max-width: 500px;
-  width: 100%;
-  background: #fff;
-  margin: 20px auto;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
-  padding: 30px;
-}
-
-.wrapper .title{
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: #fec107;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.wrapper .form{
-  width: 100%;
-}
-
-.wrapper .form .inputfield{
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.wrapper .form .inputfield label{
-   width: 200px;
-   color: #757575;
-   margin-right: 10px;
-  font-size: 14px;
-}
-
-.wrapper .form .inputfield .input,
-.wrapper .form .inputfield .textarea{
-  width: 100%;
-  outline: none;
-  border: 1px solid #d5dbd9;
-  font-size: 15px;
-  padding: 10px 10px;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-.wrapper .form .inputfield .textarea{
-  width: 100%;
-  height: 125px;
-  resize: none;
-}
-
-.wrapper .form .inputfield .custom_select{
-  position: relative;
-  width: 100%;
-  height: 37px;
-}
-
-.wrapper .form .inputfield .custom_select:before{
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: 10px;
-  border: 10px solid;
-  border-color: #d5dbd9 transparent transparent transparent;
-  pointer-events: none;
-}
-
-.wrapper .form .inputfield .custom_select select{
-  -webkit-appearance: none;
-  -moz-appearance:   none;
-  appearance:        none;
-  outline: none;
-  width: 100%;
-  height: 100%;
-  border: 0px;
-  padding: 10px 10px;
-  font-size: 15px;
-  border: 1px solid #d5dbd9;
-  border-radius: 3px;
-}
-
-
-.wrapper .form .inputfield .input:focus,
-.wrapper .form .inputfield .textarea:focus,
-.wrapper .form .inputfield .custom_select select:focus{
-  border: 1px solid #fec107;
-}
-
-.wrapper .form .inputfield p{
-   font-size: 14px;
-   color: #757575;
-}
-.wrapper .form .inputfield .check{
-  width: 15px;
-  height: 15px;
-  position: relative;
-  display: block;
-  cursor: pointer;
-}
-.wrapper .form .inputfield .check input[type="checkbox"]{
-  position: absolute;
-  top: 0;
-  left: 0;
-  opafacility: 0;
-}
-.wrapper .form .inputfield .check .checkmark{
-  width: 15px;
-  height: 15px;
-  border: 1px solid #fec107;
-  display: block;
-  position: relative;
-}
-.form-group .form .inputfield .check .checkmark:before{
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 2px;
-  width: 5px;
-  height: 2px;
-  border: 2px solid;
-  border-color: transparent transparent #fff #fff;
-  transform: rotate(-45deg);
-  display: none;
-}
-.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
-  background: #fec107;
-}
-
-.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
-  display: block;
-}
-
-.wrapper .form .inputfield .btn{
-  width: 100%;
-   padding: 10px 10px;
-  font-size: 15px; 
-  border: 0px;
-  background:  #fec107;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 3px;
-  outline: none;
-}
-
-input {
-  width: 100%;
-  color: rgb(245, 82, 17); /* Make input text black */
-}
-.body {
-  margin: auto;
-  width: 50%;
-  border: 3px solid rgb(255, 255, 255);
-  padding: 10px;
-}
-form label {
-  color: rgba(32, 16, 94, 0.992); /* Make label text blue */
-}
-/*card css*/
-
-
-
-  </style>
+  <link rel="stylesheet" href="formstyle.css">
 </head>
 
 <body>
   <div class="container">
     <div class="jumbotron text-center bg-success text-white">
+    <div class="logo-container">
+    <a href="#">
+      <img src="https://dhims.chimgh.org/dhims/api/staticContent/logo_front" alt="Logo">
+    </a>
+  </div>
       <b><h2>GREATER ACCRA REGIONAL HEALTH DIRECTORATE</h2></b>
       <h4> MATERNAL DEATHS REPORTING FORM </h4>
       <h4><b>NOTE:</b></h4><i><h6><span style="color:rgb(0, 0, 0)";>This audit form is strictly confidential and must be submitted to the head of the facility, the district and regional office. <br>
@@ -1033,11 +823,22 @@ form label {
           <button type="submit" class="btn btn-primary" onclick="return confirmSubmit();" >Submit</button> 
        
           <button type="submit" class="btn btn-secondary">Cancel</button>
+          
+          <!--<button type="submit"  href="logout.php">Logout</button>-->
+          <!--<a href="logout.php">Logout</a>-->
+          <a href="logout.php" id = "logout-button" class="logout-btn" onclick="return confirmlogout();">Logout</a>
+
+    
       </div>
         </form>
       </div>
+      
     </div>
+    
   </div>
+  <div class="btn">
+  <a button type="submit" class="btn btn-primary"  href="reportsummary.php">View reports</a></button>
+    </div>
 <script>
   var districtList = [
       { region: 'Greater Accra', district: 'Ablekuma West' },
@@ -1203,6 +1004,25 @@ $(".input_text").focusout(function(){
     }
     return confirmation;
   }
+
+
+// get a reference to the logout button element
+const logoutButton = document.getElementById('logout-button');
+
+// add a click event listener to the button
+logoutButton.addEventListener('click', function(event) {
+  // prevent the default behavior of the button click event
+  event.preventDefault();
+
+  // show a confirmation dialog to the user
+  const confirmLogout = confirm('Are you sure you want to logout?');
+
+  // if the user confirms the logout, redirect to the login page
+  if (confirmLogout) {
+    window.location.href = 'index.php';
+  }
+});
+
 </script>
 
   </body>
